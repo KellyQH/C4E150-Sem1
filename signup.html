@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Add website icon -->
+     <link rel="icon" type="image/x-icon" href="./images/logo.ico">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+
+        *,
+        *::before,
+        *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        .validation-bg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 5%;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(./images/georgia-z-0StN_tFWOhc-unsplash.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 100vh;
+        }
+        .signup-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .validation-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group .fa {
+            position: absolute;
+            top: 38px;
+            right: 10px;
+            display: none;
+        }
+        .form-group .fa-check-circle {
+            color: green;
+        }
+        .form-group .fa-exclamation-circle {
+            color: red;
+        }
+        .form-group small {
+            color: red;
+            display: none;
+        }
+        .separator {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background-color: #FD7014;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background: #d16f23;
+        }
+        .separator {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .separator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #ccc;
+            z-index: 1;
+        }
+        .separator::after {
+            content: 'or';
+            position: relative;
+            background: white;
+            padding: 0 10px;
+            z-index: 2;
+        }
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-login button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .google-login {
+            background-color: #db4437;
+            color: white;
+        }
+        .google-login:hover {
+            background-color: #c23321;
+        }
+        .facebook-login {
+            background-color: #4267b2;
+            color: white;
+        }
+        .facebook-login:hover {
+            background-color: #365899;
+        }
+
+        .signup-container h1, p {
+            color: #fff;
+        }
+
+        .others {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .others p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="validation-bg">
+        <div class="container">
+            <div class="signup-container">
+                <h1>Sign up</h1>
+                <p>Please enter your details to sign up and be a part of our sushi world</p>
+            </div>
+            <div class="validation-container">
+
+                <form action="#" method="POST" id="signup-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" name="name" required placeholder="Full Name...">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small id="name-error">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email...">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small id="email-error">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="Password...">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small id="password-error">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Re-Password</label>
+                        <input type="password" class="form-control" id="password2" name="password2" required placeholder="Password...">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <small id="password2-error">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </div>
+                    <div class="others">
+                        <p class="">
+                            <a href="./index.html">Already a member? Login</a>
+                        </p>
+                    </div>
+                </form>
+                <div class="separator"></div>
+                <div class="social-login">
+                    <button class="google-login"><i class="fa fa-google"></i> Login with Google</button>
+                    <button class="facebook-login"><i class="fa fa-facebook"></i> Login with Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const Validator = {
+                isRequired: function(value) {
+                    return value.trim() !== '';
+                },
+                isEmail: function(value) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailPattern.test(value);
+                },
+                minLength: function(value, min) {
+                    return value.length >= min;
+                },
+                isMatch: function(value1, value2) {
+                    return value1 === value2;
+                }
+            };
+
+            function showError(element, message) {
+                const formGroup = element.closest('.form-group');
+                const errorIcon = formGroup.querySelector('.fa-exclamation-circle');
+                const checkIcon = formGroup.querySelector('.fa-check-circle');
+                const errorMessage = formGroup.querySelector('small');
+
+                errorIcon.style.display = 'inline';
+                checkIcon.style.display = 'none';
+                errorMessage.textContent = message;
+                errorMessage.style.display = 'block';
+            }
+
+            function showSuccess(element) {
+                const formGroup = element.closest('.form-group');
+                const errorIcon = formGroup.querySelector('.fa-exclamation-circle');
+                const checkIcon = formGroup.querySelector('.fa-check-circle');
+                const errorMessage = formGroup.querySelector('small');
+
+                errorIcon.style.display = 'none';
+                checkIcon.style.display = 'inline';
+                errorMessage.style.display = 'none';
+            }
+
+            const signupForm = document.getElementById('signup-form');
+
+            signupForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const nameInput = document.getElementById('fullname');
+                const emailInput = document.getElementById('email');
+                const passwordInput = document.getElementById('password');
+                const password2Input = document.getElementById('password2');
+
+                let isFormValid = true;
+
+                // Validate full name
+                if (!Validator.isRequired(nameInput.value)) {
+                    showError(nameInput, 'Full name is required.');
+                    isFormValid = false;
+                } else {
+                    showSuccess(nameInput);
+                }
+
+                // Validate email
+                if (!Validator.isRequired(emailInput.value)) {
+                    showError(emailInput, 'Email is required.');
+                    isFormValid = false;
+                } else if (!Validator.isEmail(emailInput.value)) {
+                    showError(emailInput, 'Please enter a valid email address.');
+                    isFormValid = false;
+                } else {
+                    showSuccess(emailInput);
+                }
+
+                // Validate password
+                if (!Validator.isRequired(passwordInput.value)) {
+                    showError(passwordInput, 'Password is required.');
+                    isFormValid = false;
+                } else if (!Validator.minLength(passwordInput.value, 6)) {
+                    showError(passwordInput, 'Password must be at least 6 characters long.');
+                    isFormValid = false;
+                } else {
+                    showSuccess(passwordInput);
+                }
+
+                // Validate re-password
+                if (!Validator.isRequired(password2Input.value)) {
+                    showError(password2Input, 'Please confirm your password.');
+                    isFormValid = false;
+                } else if (!Validator.isMatch(passwordInput.value, password2Input.value)) {
+                    showError(password2Input, 'Passwords do not match.');
+                    isFormValid = false;
+                } else {
+                    showSuccess(password2Input);
+                }
+
+                if (isFormValid) {
+                    // Form is valid, handle the signup process here
+                    console.log('Form is valid. Submitting...');
+                    // signupForm.submit(); // Uncomment this line to actually submit the form
+                }
+            });
+        });
+    </script>
+</body>
+</html>
