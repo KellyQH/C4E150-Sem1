@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalo Sushi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+     <!-- Add website icon -->
+     <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+</head>
+<body>
+    <header id="header">
+        <div class="brand-logo">
+            <a href="../index.html"><img src="../images/image.png" alt="Mahalo Sushi Logo" width="100" height="80"></a>
+        </div>
+        <nav class="Navigation" role="navigation">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='cart.html'"><img src="./menu-items/icons8-food-cart-48.png" alt=""> 
+            <span id="cartCount">0</span></button>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-5">
+        <section id="menu">
+            <h2 class="text-center">Menu</h2>
+            <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Sashimi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Poke</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Sushi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="marinated-salmon-tab" data-bs-toggle="tab" data-bs-target="#marinated-salmon-tab-pane" type="button" role="tab" aria-controls="marinated-salmon-tab-pane" aria-selected="false">Marinated Salmon</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="container text-center">
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-sushi.05d33ce9bd75050c4514.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon (Sake)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Salmon', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/tuna-sushi.3aee29369806a3ac6ff8.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tuna (Maguro)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Tuna', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-roe.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon roe (Ikura)</h5>
+                                        <p class="card-text">VND95.00</p>
+                                        <button onclick="addToCart('Salmon roe', 95.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/ikura.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flying-fish roe</h5>
+                                        <p class="card-text">VND75.00</p>
+                                        <button onclick="addToCart('Flying-fish roe', 75.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mahalo Sauce</h5>
+                                        <p class="card-text">VND12.00</p>
+                                        <button onclick="addToCart('Mahalo Sauce', 12.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 1</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 1', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 2</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 2', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="container text-center">
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-sushi.05d33ce9bd75050c4514.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon (Sake)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Salmon', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/tuna-sushi.3aee29369806a3ac6ff8.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tuna (Maguro)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Tuna', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-roe.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon roe (Ikura)</h5>
+                                        <p class="card-text">VND95.00</p>
+                                        <button onclick="addToCart('Salmon roe', 95.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/ikura.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flying-fish roe</h5>
+                                        <p class="card-text">VND75.00</p>
+                                        <button onclick="addToCart('Flying-fish roe', 75.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mahalo Sauce</h5>
+                                        <p class="card-text">VND12.00</p>
+                                        <button onclick="addToCart('Mahalo Sauce', 12.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 1</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 1', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 2</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 2', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                    <div class="container text-center">
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-sushi.05d33ce9bd75050c4514.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon (Sake)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Salmon', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/tuna-sushi.3aee29369806a3ac6ff8.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tuna (Maguro)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Tuna', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-roe.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon roe (Ikura)</h5>
+                                        <p class="card-text">VND95.00</p>
+                                        <button onclick="addToCart('Salmon roe', 95.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/ikura.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flying-fish roe</h5>
+                                        <p class="card-text">VND75.00</p>
+                                        <button onclick="addToCart('Flying-fish roe', 75.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mahalo Sauce</h5>
+                                        <p class="card-text">VND12.00</p>
+                                        <button onclick="addToCart('Mahalo Sauce', 12.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 1</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 1', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 2</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 2', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="marinated-salmon-tab-pane" role="tabpanel" aria-labelledby="marinated-salmon-tab" tabindex="0">
+                    <div class="container text-center">
+                        <div class="row mt-5">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-sushi.05d33ce9bd75050c4514.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon (Sake)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Salmon', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/tuna-sushi.3aee29369806a3ac6ff8.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tuna (Maguro)</h5>
+                                        <p class="card-text">VND99.00</p>
+                                        <button onclick="addToCart('Tuna', 99.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/salmon-roe.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salmon roe (Ikura)</h5>
+                                        <p class="card-text">VND95.00</p>
+                                        <button onclick="addToCart('Salmon roe', 95.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/ikura.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flying-fish roe</h5>
+                                        <p class="card-text">VND75.00</p>
+                                        <button onclick="addToCart('Flying-fish roe', 75.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mahalo Sauce</h5>
+                                        <p class="card-text">VND12.00</p>
+                                        <button onclick="addToCart('Mahalo Sauce', 12.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 1</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 1', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="./menu-items/rice.73be778f83bb123a049f.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tartare 2</h5>
+                                        <p class="card-text">VND39.00</p>
+                                        <button onclick="addToCart('Tartare 2', 39.000)">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <nav role="navigation">
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a title="Facebook" href="https://www.facebook.com/sushideliverydistrict7" target="_blank" rel="noopener">
+                                <img loading="lazy" src="../images/icons8-facebook.svg" alt="Facebook" />
+                            </a>
+                        </li>
+                        <li class="footer-link">
+                            <a title="Instagram" href="#" target="_blank" rel="noopener">
+                                <img loading="lazy" src="../images/icons8-instagram.svg" alt="Instagram" />
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="footer-text">
+                    &copy; <span>2024</span> - Welcome to <a href="https://www.facebook.com/sushideliverydistrict7">Mahalo Salmon</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./menu.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
